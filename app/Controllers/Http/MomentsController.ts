@@ -37,4 +37,12 @@ export default class MomentsController {
       data: moment,
     }
   }
+
+  public async index() {
+    const moments = await Moment.all()
+
+    return {
+      data: moments,
+    }
+  }
 }
